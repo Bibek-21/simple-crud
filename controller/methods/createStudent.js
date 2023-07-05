@@ -1,6 +1,6 @@
 "use strict";
 (()=>{
-    const create_student = require('../sql/createStudent');
+    const create_student = require('../sql/createStudents');
   
     module.exports = async(req, res, next) => {
         try {
