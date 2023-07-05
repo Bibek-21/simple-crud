@@ -12,7 +12,6 @@
               };
               const output =await create_student(requestObject);
               if(output==true){
-
                 res.status(201).send({
                     success:true,
                     message:"created Succesfully"

@@ -9,7 +9,7 @@
        let result = await helper.mysqlHelper.query(sqlquery); 
 
        if(result[0].affectedRows>0){
-        return true
+        return result
     }
     else{
         console.log("no rows affected");

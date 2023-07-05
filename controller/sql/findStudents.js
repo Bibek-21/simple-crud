@@ -5,16 +5,8 @@
 
         try {
             let sqlquery = `select * from  students where is_delete=0 `;
-            let result = await helper.mysqlHelper.query(sqlquery);
-            
-            if(result)
-            {
-              return result;
-             
-            }
-            else{
-             return false
-         }   
+            let [result] = await helper.mysqlHelper.query(sqlquery);
+            return result;
         }
 
         catch (error) {

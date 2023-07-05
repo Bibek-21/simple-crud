@@ -11,12 +11,16 @@
                 uuid: req.params.uuid
             }
                 const output=await update_student(obj);
+                if(output){
+                    res.send("update Succesful");
 
-                     res.send("update Succesful");
-                    res.status(200).send(output); 
-                   // res.send("update Succesful")
+                }else{
+                    res.send("update UnSuccesful");
+                 
+                }
+                     
         } catch (error) {
-           res.status(400).send("not  updated");
+           res.status(400).send("Not  updated");
             // console.log(error);
             
         }

@@ -9,11 +9,11 @@
 
 
     router.post('/createStudent',create_student);
+    router.get("/getAllStudents",find_student);
     // router.put('/updateStudent',update_student);
     router.put('/updateStudent/:uuid',update_student);
     router.delete('/deleteStudent/:uuid',delete_student);
-    router.get('/findStudent',find_student);
-
+   
 
 
     module.exports = router;

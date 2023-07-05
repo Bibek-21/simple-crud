@@ -1,10 +1,11 @@
 "use strict";
 (() => {
     const find_student = require("../sql/findStudents");
-    module.export = async (req, res, next) => {
+    module.exports = async (req, res, next) => {
         try {
 
             const output = await find_student();
+            console.log(output);
             if (output) {
                 res.send(output);
                 // res.status(200).send('Succesfully found data');
